@@ -2,7 +2,7 @@
 
 
 
-![](concert-this.gif)
+![](/Users/rosemcclain/Documents/UCF/HOMEWORK/LiriApp/liri-node-app/imagesLiri/movie-this.gif)
 
 ![](movie-this.gif)
 
