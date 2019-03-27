@@ -55,7 +55,13 @@ switchWrapper();
         console.log(URL);
 
         axios.get(URL).then(function(response) {
-            console.log(response);
+            console.log(response.data.Title);
+            console.log(response.data.Year);
+            console.log(response.data.imdbRating);
+            console.log(response.data.Ratings[1].Value);
+            console.log(response.data.Country);
+            console.log(response.data.Language);
+            console.log(response.data.Plot);
         });
         
     }
@@ -66,7 +72,16 @@ switchWrapper();
         console.log(URL);
 
         axios.get(URL).then(function(response){
-            console.log(response.data);
+            for(i = 0; i < response.data.length; i++) {
+                console.log(response.data[i].venue.name);
+                console.log(response.data[i].venue.city);
+                //moment is a module in node that it changes dates and time formats. (similar to moment.JS)
+                //This is why we had to require it at the top of our code so that we could 
+                //access this module to utilize it when searching information about different shows.
+                console.log("Date of show" + moment(response.data[i].datetime).format("L"));
+            }
+
+
 
         });
     }
